@@ -1,0 +1,21 @@
+.rodape {
+  background-color: #6278f7;
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rodape .icones_midias_sociais {
+  display: flex;
+  justify-content: space-around;
+  width: 24%;
+}
+.rodape .icones_midias_sociais img {
+  width: 28.27px;
+  height: 28.27px;
+}
+
+.rodape .desenvolvido_por {
+  color: white;
+}
