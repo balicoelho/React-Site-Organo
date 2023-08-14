@@ -1,17 +1,25 @@
 .formulario {
   display: flex;
   justify-content: center;
-  margin: 80px 0;
+  margin: 80px 30px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 .formulario form {
-  width: 70%;
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 7px 7px 15px #00000014;
   padding: 36px 64px;
+  flex: 1;
 }
 
 .formulario h1 {
   font-size: 32px;
   color: #212121;
+  font-family: "prata";
+  text-align: center;
+}
+
+.formulario .input_cor {
+  width: 200px;
 }
