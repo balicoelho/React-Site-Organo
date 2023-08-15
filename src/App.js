@@ -5,6 +5,7 @@ import Time from "./componentes/Time";
 import Rodape from "./componentes/Rodape";
 import { inicial, times as timesJs } from "./database";
 import { v4 as uuidv4 } from "uuid";
+import { AiOutlineSwitcher } from "react-icons/ai";
 
 function App() {
   const [colaboradores, setColaboradores] = useState(inicial);
@@ -43,17 +44,31 @@ function App() {
     );
   };
 
+  const [showForm, setShowForm] = useState(true);
+  const showHide = () => {
+    setShowForm(!showForm);
+  };
+
   return (
     <div className="App">
       <Banner />
-      <Formulario
-        salvarTime={salvarTime}
-        aoColaboradorCadastrado={(colaborador) =>
-          setColaboradores([...colaboradores, colaborador])
-        }
-        timesArray={times.map((time) => time.nome)}
-      />
+      {showForm ? (
+        <Formulario
+          salvarTime={salvarTime}
+          aoColaboradorCadastrado={(colaborador) =>
+            setColaboradores([...colaboradores, colaborador])
+          }
+          timesArray={times.map((time) => time.nome)}
+        />
+      ) : null}
+
       <section className="times">
+        <AiOutlineSwitcher
+          size={30}
+          color="blue"
+          className="switch"
+          onClick={showHide}
+        />
         <h1>Minha organização</h1>
         {times.map((time) => (
           <Time

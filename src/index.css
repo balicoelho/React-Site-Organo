@@ -11,6 +11,7 @@ body {
 
 .times {
   text-align: center;
+  position: relative;
 }
 
 .times h1 {
@@ -25,4 +26,9 @@ body {
 h1,
 h2 {
   font-family: "Prata", serif;
+}
+
+.times .switch {
+  position: absolute;
+  right: 50px;
 }
